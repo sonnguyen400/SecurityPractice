@@ -1,0 +1,24 @@
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          sample:
+            provider: sample
+            client-id: client
+            client-secret: client
+            scope:
+              - openid
+              - profile
+        provider:
+          sample:
+            issuer-uri: http://localhost:8085
+server:
+  port: 8088
+logging:
+  level:
+    org:
+      springframework:
+        security: trace
+debug: true

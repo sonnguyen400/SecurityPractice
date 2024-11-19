@@ -24,8 +24,11 @@
     <modules>
         <module>Oauth2Server</module>
         <module>Oauth2ResourceServer</module>
-        <module>Oauth2Client</module>
         <module>KeycloakPractice</module>
+        <module>Client1</module>
+        <module>client</module>
+        <module>KeycloakClient1</module>
+        <module>KeycloakClient2</module>
     </modules>
     <scm>
         <connection/>

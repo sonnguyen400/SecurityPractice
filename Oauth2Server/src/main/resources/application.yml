@@ -9,29 +9,7 @@ spring:
   security:
     oauth2:
       authorizationserver:
-        client:
-          oidc-client:
-            registration:
-              client-id: "client"
-              client-secret: "{noop}client"
-              client-authentication-methods:
-                - "client_secret_basic"
-                - "client_secret_jwt"
-                - "client_secret_post"
-              authorization-grant-types:
-                - "authorization_code"
-                - "refresh_token"
-              redirect-uris:
-                - "https://oidcdebugger.com/debug"
-                - "https://oauth.pstmn.io/v1/callback"
-              post-logout-redirect-uris:
-                - "http://127.0.0.1:8080/test"
-                - "email"
-              scopes:
-                - "openid"
-                - "profile"
-            require-authorization-consent: true
-        issuer: "/issuers"
+        issuer: http://localhost:8085/
 logging:
   level:
     org:

@@ -1,0 +1,23 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          sample:
+            provider: sample
+            client-id: client2
+            client-secret: cay8L3AH3FWheBk6nBS5B7LRXaLSlmHc
+            scope:
+              - openid
+              - profile
+        provider:
+          sample:
+            issuer-uri: http://localhost:8080/realms/master
+server:
+  port: 8091
+logging:
+  level:
+    org:
+      springframework:
+        security: trace
+debug: true
