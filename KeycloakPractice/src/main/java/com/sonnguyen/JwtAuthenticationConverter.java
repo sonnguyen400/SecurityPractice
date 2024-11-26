@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class JwtAuthenticationConverter implements Converter<Jwt, AbstractAuthenticationToken> {
     public AbstractAuthenticationToken convert(Jwt jwt) {
-        Collection<String> authorities = (Collection<String>) ((Map<String,Map<String,Object>>)jwt.getClaimAsMap("resource_access").get("client")).get("roles");
+        Collection<String> authorities = (Collection<String>) jwt.getClaimAsMap("realm_access").get("roles");
         Collection<GrantedAuthority> grantedAuthorities = authorities.stream()
                 .map(role->new SimpleGrantedAuthority("ROLE_"+role.toUpperCase()))
                 .collect(Collectors.toList());

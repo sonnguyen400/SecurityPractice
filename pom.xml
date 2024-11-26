@@ -29,6 +29,7 @@
         <module>client</module>
         <module>KeycloakClient1</module>
         <module>KeycloakClient2</module>
+        <module>KeyCloakTest</module>
     </modules>
     <scm>
         <connection/>

@@ -1,0 +1,24 @@
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/whatamovie-front
+        registration:
+          keycloak:
+            provider: keycloak
+            client-id: client
+            client-secret: soi3BsqvAuJohA6YoJIzjcjbjRhQHAtd
+            scope: openid
+server:
+  port: 8085
+
+keycloak:
+  server-url: http://localhost:8080
+  enable: true
+  user_management:
+    registration:
+      realm: "whatamovie-front"
+      username: admin
+      password: 123456

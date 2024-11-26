@@ -6,7 +6,7 @@ spring:
           sample:
             provider: sample
             client-id: client2
-            client-secret: cay8L3AH3FWheBk6nBS5B7LRXaLSlmHc
+            client-secret: tOTEo9x7QDmVsZOoMr8TC284jGxAWCpR
             scope:
               - openid
               - profile
